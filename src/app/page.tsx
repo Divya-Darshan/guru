@@ -1,103 +1,84 @@
-import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
-}
+    <>
+
+        <section className="flex items-center justify-center min-h-screen bg-black">
+          <div className="relative flex items-center justify-center" style={{ width: '100%', height: '100vh' }}>
+            <video
+              className="w-full h-full object-cover rounded-lg shadow-lg"
+              src="./vid/main.mp4"
+              loop
+              autoPlay
+              muted
+            ></video>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <p className="text-white text-4xl text-shadow-2xs font-serif bg-opacity-40 px-6 py-2 rounded-l">
+                💘Guru & Ananya
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div className="p-8 text-center">
+            <h2 className="text-3xl font-bold mb-4">Our Story</h2>
+            <br />
+            <p className="text-lg text-white font-serif max-w-4xl mx-auto md:pl-[150px] md:pr-[150px] pl-0 pr-0">
+              Once upon a time, in the bustling city of Mumbai, two souls crossed paths in the most unexpected way. Guru, a passionate coder with a love for technology, and Ananya, a creative spirit with a heart full of dreams, found themselves drawn to each other amidst the chaos of everyday life.
+            </p>
+          </div>
+        </section>
+        <br />
+
+        <section className="">
+          <div>
+            <h2 className="text-3xl font-bold mb-4 text-center">Wedding Details</h2>
+          </div>
+          <div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
+              {[
+                {
+                  title: 'Mehndi Ceremony',
+                  details: 'Monday, 10:00 AM – 8:00 PM',
+                  desc: 'Join us for beautiful henna art, music, and fun!'
+                },
+                {
+                  title: 'Sangeet Night',
+                  details: 'Tuesday, 7:00 PM – 11:00 PM',
+                  desc: 'A night of dance, music, and celebration with family and friends.'
+                },
+                {
+                  title: 'Wedding Ceremony',
+                  details: 'Wednesday, 9:00 AM – 2:00 PM',
+                  desc: 'Traditional rituals and vows as Guru & Ananya begin their new journey.'
+                },
+                {
+                  title: 'Reception & Dinner',
+                  details: 'Wednesday, 7:00 PM onwards',
+                  desc: 'Celebrate with a grand feast, music, and joy!'
+                }
+              ].map((event, idx) => (
+                <div
+                  key={event.title}
+                  className="border-4 border-silver bg-gradient-to-br from-gray-100 to-gray-300 h-40 w-44 md:h-60 md:w-80 lg:h-72 lg:w-96 rounded-xl shadow-lg flex flex-col items-center justify-center text-base md:text-xl font-semibold text-gray-800 mb-8 transition-all duration-300 p-4 text-center"
+                  style={{ borderColor: '#C0C0C0' }}
+                >
+                  <div>
+                    <div className="font-bold text-lg md:text-2xl mb-2">{event.title}</div>
+                    <div className="text-sm md:text-base mb-1">{event.details}</div>
+                    <div className="text-xs md:text-sm text-gray-600">{event.desc}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+          </div>
+
+          
+        </section>
+        </>
+     
+    );
+  }
