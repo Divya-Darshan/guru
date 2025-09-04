@@ -62,7 +62,7 @@ export default function Home() {
               ].map((event, idx) => (
                 <div
                   key={event.title}
-                  className="border-4 border-silver bg-gradient-to-br from-gray-100 to-gray-300 h-40 w-44 md:h-60 md:w-80 lg:h-72 lg:w-96 rounded-xl shadow-lg flex flex-col items-center justify-center text-base md:text-xl font-semibold text-gray-800 mb-8 transition-all duration-300 p-4 text-center"
+                  className="border-4 border-black bg-gradient-to-br from-gray-100 to-gray-00 h-40 w-44 md:h-60 md:w-80 lg:h-72 lg:w-96 rounded-xl shadow-lg flex flex-col items-center justify-center text-base md:text-xl font-semibold text-gray-800 mb-8 transition-all duration-300 p-4 text-center"
                   style={{ borderColor: '#C0C0C0' }}
                 >
                   <div>
