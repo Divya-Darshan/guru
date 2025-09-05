@@ -18,6 +18,9 @@ export default function Home() {
       2px 2px 5px #000
     `,
   }}>
+          <a href="#home" className="text-white hover:text-pink-400 transition">
+          Home
+          </a>
           <a href="#detail" className="text-white hover:text-pink-400 transition">
           About
           </a>
@@ -37,7 +40,7 @@ export default function Home() {
       </div>
     </nav>
     
-    <section className="flex items-center justify-center min-h-screen bg-black">
+    <section id="home" className="flex items-center justify-center min-h-screen bg-black">
       <div
         className="relative flex items-center justify-center"
         style={{ width: "100%", height: "100vh" }}
