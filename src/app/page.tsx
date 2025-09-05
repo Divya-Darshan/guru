@@ -37,19 +37,30 @@ export default function Home() {
 </section>
 
 
-      <section>
-        <div className="p-8 text-center">
-          <h2 className="text-3xl font-bold mb-4 text-pink-900 font-serif italic ">Our Story</h2>
-          <br />
-          <p className="text-lg text-white font-serif max-w-4xl mx-auto md:pl-[150px] md:pr-[150px] pl-0 pr-0">
-            Once upon a time, in the bustling city of Mumbai, two souls crossed
-            paths in the most unexpected way. Guru, a passionate coder with a
-            love for technology, and Ananya, a creative spirit with a heart full
-            of dreams, found themselves drawn to each other amidst the chaos of
-            everyday life.
-          </p>
-        </div>
-      </section>
+<section className="py-16 bg-gradient-to-br from-white to-pink-50">
+  <div className="max-w-5xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center md:items-start gap-10">
+    
+    {/* Left decorative side */}
+    <div className="md:w-1/3 flex flex-col items-center md:items-start">
+      <h2 className="text-4xl font-[Parisienne] text-pink-900 mb-4">
+        Our Story
+      </h2>
+      <div className="h-1 w-20 bg-pink-300 rounded-full mb-6"></div>
+    </div>
+
+    {/* Right text content */}
+    <div className="md:w-2/3">
+      <p className="text-lg leading-relaxed text-gray-700 font-serif italic">
+        Once upon a time, in the bustling city of <span className="text-pink-600 font-semibold"> Chennai </span>, 
+        two souls crossed paths in the most unexpected way. 
+        <span className="text-pink-600 font-semibold"> Guru</span>, a passionate coder with a love for technology, 
+        and <span className="text-pink-600 font-semibold">Ananya</span>, a creative spirit with a heart full of dreams, 
+        found themselves drawn to each other amidst the chaos of everyday life.
+      </p>
+    </div>
+  </div>
+</section>
+
       <br />
 
 <section>
@@ -125,8 +136,9 @@ export default function Home() {
 </section>
 
 
-      <section>
+<section className="py-16 bg-gradient-to-br from-white to-pink-50">
         <div>
+          
           <h2 className="text-3xl font-bold mb-4 text-center  text-pink-900 font-serif italic ">Memories</h2>
         </div>
         <div>
