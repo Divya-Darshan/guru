@@ -6,6 +6,37 @@ export default function Home() {
   const [showInvitation, setShowInvitation] = useState(false);
   return (
     <>
+
+        <nav className="w-full fixed top-0 left-0 z-50 bg-[#ffffff5d] bg-opacity-60 font-serif italic backdrop-blur-md shadow-lg">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        {/* Logo / Name */}
+        <h1 className="text-1xl font-serif italic text-[#ff00ae]">G & A</h1>
+
+        {/* Links (always visible on all screens) */}
+        <div className="space-x-5 flex " style={{
+    textShadow: `
+      2px 2px 5px #000
+    `,
+  }}>
+          <a href="#detail" className="text-white hover:text-pink-400 transition">
+          About
+          </a>
+          <a
+            href="#Memories"
+            className="text-white hover:text-pink-400 transition"
+          >
+            Memories
+          </a>
+          <a
+            href="#RSVP"
+            className="text-white hover:text-pink-400 transition"
+          >
+            RSVP
+          </a>
+        </div>
+      </div>
+    </nav>
+    
     <section className="flex items-center justify-center min-h-screen bg-black">
       <div
         className="relative flex items-center justify-center"
@@ -123,7 +154,7 @@ export default function Home() {
 
       <br />
 
-<section>
+<section id="detail">
   <div>
     <h2 className="text-3xl font-bold mb-8 text-center text-pink-900 font-serif italic">
       Wedding Details
@@ -196,7 +227,7 @@ export default function Home() {
 </section>
 
 
-<section className="py-16 bg-gradient-to-br from-white to-pink-50">
+<section className="py-16 bg-gradient-to-br from-white to-pink-50" id="Memories">
         <div>
           
           <h2 className="text-3xl font-bold mb-4 text-center  text-pink-900 font-serif italic ">Memories</h2>
@@ -231,7 +262,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-16 mb-8">
+      <section className="mt-16 mb-8" id="RSVP" >
         <div className="max-w-xl mx-auto rounded-xl p-8">
           <h2 className="text-3xl font-bold mb-6 text-center  text-pink-900 font-serif italic ">RSVP</h2>
           <form className="flex flex-col gap-6">
