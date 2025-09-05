@@ -1,40 +1,100 @@
+"use client";
+
+import { useState } from "react";
+
 export default function Home() {
+  const [showInvitation, setShowInvitation] = useState(false);
   return (
     <>
-<section className="flex items-center justify-center min-h-screen bg-black">
-  <div
-    className="relative flex items-center justify-center"
-    style={{ width: "100%", height: "100vh" }}
-  >
-    {/* Background video */}
-    <video
-      className="w-full h-full object-cover rounded-lg shadow-lg"
-      src="./vid/main.mp4"
-      loop
-      autoPlay
-      muted
-    ></video>
-
-    {/* Overlay text */}
-    <div className="absolute inset-0 flex items-center justify-center">
-      <h1
-        className="text-5xl md:text-7xl   font-serif italic text-white text-center"
-        style={{
-          textShadow: "3px 3px 6px rgba(0,0,0,0.8)", // clean hard shadow
-          letterSpacing: "2px",
-        }}
+    <section className="flex items-center justify-center min-h-screen bg-black">
+      <div
+        className="relative flex items-center justify-center"
+        style={{ width: "100%", height: "100vh" }}
       >
-         Guru{" "}
-        <span
-                className="  text-[#ff00ae] font-serif italic text-shadow-1x"     ><br />
-          &
-          <br />
-        </span>{" "}
-        Ananya
-      </h1>
-    </div>
-  </div>
-</section>
+        {/* Background video */}
+        <video
+          className="w-full h-full object-cover rounded-lg shadow-lg"
+          src="./vid/main.mp4"
+          loop
+          autoPlay
+          muted
+        />
+
+        {/* Overlay content */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+          <h1
+            className="text-5xl md:text-7xl font-serif italic text-white"
+            style={{
+              textShadow: "3px 3px 6px rgba(0,0,0,0.8)",
+              letterSpacing: "2px",
+            }}
+          >
+            Guru{" "}
+            <span
+              className="text-[#ff00ae] font-serif italic"
+              style={{ textShadow: "3px 3px 6px rgba(0,0,0,0.8)" }}
+            >
+              <br /> & <br />
+            </span>{" "}
+            Ananya
+          </h1>
+
+          <p
+            className="mt-6 text-lg md:text-2xl font-serif italic text-white"
+            style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.7)" }}
+          >
+            💖 A Royal Beginning of Forever 💖
+          </p>
+
+          <p
+            className="mt-2 text-md md:text-lg font-serif italic text-white"
+            style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.6)" }}
+          >
+            30th July 2025
+          </p>
+
+          {/* Invitation Button */}
+          <button
+            onClick={() => setShowInvitation(true)}
+            className="mt-6 bg-gradient-to-r from-pink-500 to-rose-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:scale-105 hover:shadow-xl transition-transform duration-300"
+          >
+            View Invitation
+          </button>
+        </div>
+      </div>
+
+      {/* Modal */}
+      {showInvitation && (
+        <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
+          <div
+            className="relative transform transition-transform duration-700 [transform-style:preserve-3d] animate-[flip_1s_ease]"
+            style={{ width: "80%", maxWidth: "600px" }}
+          >
+            <img
+              src="./img/img.webp"
+              alt="Invitation"
+              className="w-full h-auto rounded-lg shadow-2xl"
+            />
+            {/* Close button */}
+            <button
+              onClick={() => setShowInvitation(false)}
+              className="absolute top-4 right-4 bg-black text-white h-10 rounded-full px-3 py-1 shadow-lg hover:bg-gray-200"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Flip animation */}
+      <style>{`
+        @keyframes flip {
+          from { transform: rotateY(90deg); opacity: 0; }
+          to { transform: rotateY(0deg); opacity: 1; }
+        }
+      `}</style>
+    </section>
+
 
 
 <section className="py-16 bg-gradient-to-br from-white to-pink-50">
